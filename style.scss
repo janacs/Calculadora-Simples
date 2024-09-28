@@ -1,0 +1,71 @@
+// Variáveis
+$background-color: #f4f4f4;
+$calculadora-bg-color: #fff;
+$border-radius: 10px;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+$font-family: Arial, sans-serif;
+$button-bg-color: #007bff;
+$button-hover-color: #0056b3;
+$button-active-color: #003d7a;
+$input-border-color: #ccc;
+
+// Global Styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: $background-color;
+}
+
+// Estilo da Calculadora
+.calculadora {
+  background-color: $calculadora-bg-color;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  // Estilo do visor
+  #visor {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid $input-border-color;
+    border-radius: 5px;
+  }
+
+  // Grid de botões
+  .botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    button {
+      font-size: 24px;
+      padding: 20px;
+      background-color: $button-bg-color;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+
+      &:active {
+        background-color: $button-active-color;
+      }
+    }
+  }
+}
